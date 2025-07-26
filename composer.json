@@ -1,0 +1,82 @@
+{
+    "name": "metasoftdevs/laravel-breeze-2fa",
+    "description": "Advanced two-factor authentication package for Laravel Breeze with multi-channel support (TOTP, Email, SMS) and custom authentication integration",
+    "keywords": [
+        "laravel",
+        "breeze",
+        "two-factor",
+        "2fa",
+        "authentication",
+        "totp",
+        "otp",
+        "security"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "MetaSoft Developers",
+            "email": "developers@metasoft.dev"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "laravel/framework": "^10.0|^11.0|^12.0",
+        "pragmarx/google2fa": "^8.0",
+        "bacon/bacon-qr-code": "^2.0",
+        "illuminate/contracts": "^10.0|^11.0|^12.0"
+    },
+    "require-dev": {
+        "laravel/breeze": "^1.0|^2.0",
+        "orchestra/testbench": "^8.0|^9.0|^10.0",
+        "phpunit/phpunit": "^10.0",
+        "mockery/mockery": "^1.4",
+        "nunomaduro/collision": "^7.0|^8.0",
+        "larastan/larastan": "^2.0",
+        "friendsofphp/php-cs-fixer": "^3.0"
+    },
+    "suggest": {
+        "twilio/sdk": "Required for SMS OTP via Twilio (^7.0)",
+        "vonage/client": "Required for SMS OTP via Vonage/Nexmo (^4.0)",
+        "laravel/horizon": "For queue monitoring when using email/SMS OTP",
+        "laravel/breeze": "For seamless Breeze integration"
+    },
+    "autoload": {
+        "psr-4": {
+            "MetaSoftDevs\\LaravelBreeze2FA\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MetaSoftDevs\\LaravelBreeze2FA\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage",
+        "format": "vendor/bin/php-cs-fixer fix --allow-risky=yes",
+        "analyse": "vendor/bin/phpstan analyse",
+        "quality": [
+            "@format",
+            "@analyse",
+            "@test"
+        ]
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "composer/package-versions-deprecated": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "MetaSoftDevs\\LaravelBreeze2FA\\TwoFactorServiceProvider"
+            ],
+            "aliases": {
+                "TwoFactor": "MetaSoftDevs\\LaravelBreeze2FA\\Facades\\TwoFactor"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

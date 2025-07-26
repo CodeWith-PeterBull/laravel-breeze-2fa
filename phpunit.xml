@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/10.0/phpunit.xsd"
+         bootstrap="vendor/autoload.php"
+         colors="true"
+         processIsolation="false"
+         stopOnFailure="false"
+         executionOrder="random"
+         failOnWarning="true"
+         failOnRisky="true"
+         failOnEmptyTestSuite="true"
+         beStrictAboutOutputDuringTests="true"
+         cacheDirectory="build/cache/phpunit"
+         backupStaticAttributes="false">
+    
+    <testsuites>
+        <testsuite name="Unit">
+            <directory suffix="Test.php">./tests/Unit</directory>
+        </testsuite>
+        <testsuite name="Feature">
+            <directory suffix="Test.php">./tests/Feature</directory>
+        </testsuite>
+        <testsuite name="Integration">
+            <directory suffix="Test.php">./tests/Integration</directory>
+        </testsuite>
+    </testsuites>
+    
+    <source>
+        <include>
+            <directory suffix=".php">./src</directory>
+        </include>
+        <exclude>
+            <directory>./src/Console/Commands</directory>
+            <file>./src/TwoFactorServiceProvider.php</file>
+        </exclude>
+    </source>
+    
+    <coverage includeUncoveredFiles="true"
+              processUncoveredFiles="true"
+              pathCoverage="false"
+              ignoreDeprecatedCodeUnits="true"
+              disableCodeCoverageIgnore="true">
+        <report>
+            <html outputDirectory="build/coverage/html-coverage" lowUpperBound="50" highLowerBound="90"/>
+            <clover outputFile="build/coverage/clover.xml"/>
+            <cobertura outputFile="build/coverage/cobertura.xml"/>
+            <crap4j outputFile="build/coverage/crap4j.xml" threshold="50"/>
+            <php outputFile="build/coverage/coverage.php"/>
+            <text outputFile="build/coverage/coverage.txt" showUncoveredFiles="false" showOnlySummary="true"/>
+        </report>
+    </coverage>
+    
+    <logging>
+        <junit outputFile="build/logs/junit.xml"/>
+        <teamcity outputFile="build/logs/teamcity.txt"/>
+        <testdoxHtml outputFile="build/logs/testdox.html"/>
+        <testdoxText outputFile="build/logs/testdox.txt"/>
+    </logging>
+    
+    <php>
+        <server name="APP_ENV" value="testing"/>
+        <server name="APP_KEY" value="base64:+oDiDJZ0EOz6+xgvKyUGHJhxhzDhCDixOLY9S5GGpkQ="/>
+        <server name="APP_DEBUG" value="true"/>
+        <server name="BCRYPT_ROUNDS" value="4"/>
+        <server name="CACHE_DRIVER" value="array"/>
+        <server name="DB_CONNECTION" value="sqlite"/>
+        <server name="DB_DATABASE" value=":memory:"/>
+        <server name="MAIL_MAILER" value="array"/>
+        <server name="QUEUE_CONNECTION" value="sync"/>
+        <server name="SESSION_DRIVER" value="array"/>
+        <server name="TELESCOPE_ENABLED" value="false"/>
+        
+        <!-- Two-Factor Authentication Test Configuration -->
+        <server name="TWO_FACTOR_ENABLED" value="true"/>
+        <server name="TWO_FACTOR_REQUIRED" value="false"/>
+        <server name="TWO_FACTOR_TOTP_ENABLED" value="true"/>
+        <server name="TWO_FACTOR_EMAIL_ENABLED" value="true"/>
+        <server name="TWO_FACTOR_SMS_ENABLED" value="false"/>
+        <server name="TWO_FACTOR_RECOVERY_CODES_ENABLED" value="true"/>
+        <server name="TWO_FACTOR_REMEMBER_DEVICE_ENABLED" value="true"/>
+        <server name="TWO_FACTOR_RATE_LIMITING_ENABLED" value="true"/>
+        <server name="TWO_FACTOR_EVENTS_ENABLED" value="true"/>
+    </php>
+</phpunit> 

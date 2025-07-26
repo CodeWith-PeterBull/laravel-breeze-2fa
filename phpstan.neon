@@ -1,0 +1,125 @@
+includes:
+    - vendor/larastan/larastan/extension.neon
+
+parameters:
+    level: 8
+    
+    paths:
+        - src/
+        - config/
+        - tests/
+    
+    excludePaths:
+        - tests/Fixtures/
+        - vendor/
+        - build/
+    
+    # Laravel specific configuration
+    checkMissingIterableValueType: false
+    checkGenericClassInNonGenericObjectType: false
+    
+    # Ignore errors in specific files
+    ignoreErrors:
+        # Laravel Facade issues
+        - '#Call to an undefined method Illuminate\\Contracts\\Foundation\\Application::#'
+        - '#Access to an undefined property Illuminate\\Contracts\\Foundation\\Application::#'
+        
+        # Laravel model dynamic properties
+        - '#Access to an undefined property [a-zA-Z\\]+::\\$[a-zA-Z_]+#'
+        - '#Call to an undefined method [a-zA-Z\\]+::[a-zA-Z_]+\(\)#'
+        
+        # Laravel collection methods
+        - '#Method Illuminate\\Support\\Collection::[a-zA-Z_]+\(\) invoked with [0-9]+ parameters?, [0-9]+ required#'
+        
+        # Test specific ignores
+        - '#Cannot access property \\$[a-zA-Z_]+ on mixed#'
+        - path: tests/
+          message: '#Unsafe usage of new static\(\)#'
+        - path: tests/
+          message: '#Parameter .* of method .* has invalid type#'
+        
+        # Package specific ignores
+        - '#Call to function is_null\(\) with .* will always evaluate to false#'
+        - '#Strict comparison using === between .* and null will always evaluate to false#'
+        
+        # Ignore nullable issues in configuration arrays
+        - '#Cannot access offset .* on mixed#'
+        - '#Offset .* does not exist on array#'
+        
+        # Laravel helpers
+        - '#Function config not found#'
+        - '#Function app not found#'
+        - '#Function request not found#'
+        - '#Function session not found#'
+        - '#Function auth not found#'
+        - '#Function cache not found#'
+        - '#Function event not found#'
+        - '#Function route not found#'
+        - '#Function trans not found#'
+        - '#Function now not found#'
+        
+        # Eloquent model methods
+        - '#Call to an undefined method Illuminate\\Database\\Eloquent\\Builder::#'
+        - '#Parameter .* of method .* expects Illuminate\\Database\\Eloquent\\Model, .* given#'
+        
+        # Migration specific
+        - '#Call to an undefined method Illuminate\\Database\\Schema\\Blueprint::#'
+    
+    # Custom bootstrap for Laravel
+    bootstrapFiles:
+        - vendor/autoload.php
+    
+    # Symfony specific configuration
+    symfony:
+        consoleApplicationLoader: tests/console-application-loader.php
+        
+    # Custom rules
+    reportUnmatchedIgnoredErrors: false
+    checkTooWideReturnTypesInProtectedAndPublicMethods: true
+    checkUninitializedProperties: true
+    checkImplicitMixed: false
+    checkBenevolentUnionTypes: false
+    
+    # Baseline
+    baseline: phpstan-baseline.neon
+    
+    # Stub files for better analysis
+    stubFiles:
+        - stubs/laravel.stub
+        - stubs/eloquent.stub
+    
+    # Type aliases
+    typeAliases:
+        UserId: 'int|string'
+        TwoFactorMethod: "'totp'|'email'|'sms'"
+        TwoFactorType: "'verification'|'setup'|'challenge'"
+        
+    # Service map for better DI analysis  
+    # This helps PHPStan understand Laravel's service container
+    dynamicConstantNames:
+        - App\*
+        - Illuminate\*
+        - MetaSoftDevs\LaravelBreeze2FA\*
+        
+    # Universal object crates
+    universalObjectCratesClasses:
+        - Illuminate\Http\Request
+        - Illuminate\Support\Collection
+        - Illuminate\Database\Eloquent\Model
+        
+    # Custom rules
+    rules:
+        - NunoMaduro\Larastan\Rules\NoUnnecessaryCollectionCallRule
+        - NunoMaduro\Larastan\Rules\ModelMethodsRule
+        - NunoMaduro\Larastan\Rules\NoUselessValueFunctionCallRule
+        
+    # Memory limit
+    memoryLimitFile: '.phpstan-memory-limit'
+    
+    # Parallel processing
+    parallel:
+        maximumNumberOfProcesses: 4
+        minimumNumberOfJobsPerProcess: 2
+        
+    # Cache
+    tmpDir: build/cache/phpstan 
