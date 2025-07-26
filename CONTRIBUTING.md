@@ -15,7 +15,7 @@ Thank you for considering contributing to Laravel Breeze 2FA! This guide will he
 
 ## Code of Conduct
 
-This project adheres to a Code of Conduct. By participating, you are expected to uphold this code. Please report unacceptable behavior to developers@metasoft.dev.
+This project adheres to a Code of Conduct. By participating, you are expected to uphold this code. Please report unacceptable behavior to info@metasoftdevs.com.
 
 ### Our Standards
 
@@ -376,7 +376,7 @@ Before creating a release:
 
 - **GitHub Issues**: For bug reports and feature requests
 - **GitHub Discussions**: For questions and general discussion
-- **Email**: developers@metasoft.dev for security issues
+- **Email**: info@metasoftdevs.com for security issues
 
 ### Documentation
 
