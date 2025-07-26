@@ -14,10 +14,16 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "MetaSoft Developers",
-            "email": "developers@metasoft.dev"
+            "name": "Meta Software Developers",
+            "email": "info@metasoftdevs.com"
         }
     ],
+    "support": {
+    "issues": "https://github.com/metasoftdevs/laravel-breeze-2fa/issues",
+    "source": "https://github.com/metasoftdevs/laravel-breeze-2fa",
+    "docs": "https://docs.metasoftdevs.com/laravel-breeze-2fa",
+    "homepage": "https://www.metasoftdevs.com"
+},
     "require": {
         "php": "^8.1",
         "laravel/framework": "^10.0|^11.0|^12.0",
