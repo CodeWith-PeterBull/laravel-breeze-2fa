@@ -77,7 +77,8 @@
                                     Two-Factor Authentication Enabled
                                 </h3>
                                 <div class="mt-2 text-sm text-green-700">
-                                    <p>Your account is protected with {{ $status['method_display_name'] }}.</p>
+                                    <p>Your account is protected with
+                                        {{ $status['method_display_name'] ?? '2FA METHOD' }}.</p>
                                     @if ($status['recovery_codes_count'] > 0)
                                         <p class="mt-1">You have {{ $status['recovery_codes_count'] }} recovery codes
                                             remaining.</p>
@@ -175,12 +176,14 @@
                             <div class="space-y-4">
                                 @foreach ($availableMethods as $method => $details)
                                     <div class="relative">
-                                        <input type="radio" name="method" value="{{ $method }}" id="method-{{ $method }}"
-                                            class="peer sr-only" {{ $loop->first ? 'checked' : '' }}
+                                        <input type="radio" name="method" value="{{ $method }}"
+                                            id="method-{{ $method }}" class="peer sr-only"
+                                            {{ $loop->first ? 'checked' : '' }}
                                             aria-describedby="method-{{ $method }}-description">
-                                        
+
                                         <label for="method-{{ $method }}" class="cursor-pointer block">
-                                            <div class="w-full p-4 border-2 border-gray-200 rounded-lg peer-checked:border-indigo-500 peer-checked:bg-indigo-50 hover:border-gray-300 hover:bg-gray-50 peer-checked:hover:bg-indigo-100 transition-all duration-200">
+                                            <div
+                                                class="w-full p-4 border-2 border-gray-200 rounded-lg peer-checked:border-indigo-500 peer-checked:bg-indigo-50 hover:border-gray-300 hover:bg-gray-50 peer-checked:hover:bg-indigo-100 transition-all duration-200">
                                                 <div class="flex items-start">
                                                     <div class="flex-shrink-0 mt-1 mr-4">
                                                         @if ($method === 'totp')
@@ -213,13 +216,17 @@
                                                         <h4 class="text-sm font-medium text-gray-900">
                                                             {{ $details['name'] }}
                                                         </h4>
-                                                        <p class="text-sm text-gray-500" id="method-{{ $method }}-description">
+                                                        <p class="text-sm text-gray-500"
+                                                            id="method-{{ $method }}-description">
                                                             {{ $details['description'] }}
                                                         </p>
                                                     </div>
                                                     <div class="flex-shrink-0 ml-4">
-                                                        <div class="h-4 w-4 border-2 border-gray-300 rounded-full flex items-center justify-center peer-checked:border-indigo-500 peer-checked:bg-indigo-50">
-                                                            <div class="h-2 w-2 rounded-full bg-indigo-600 opacity-0 peer-checked:opacity-100"></div>
+                                                        <div
+                                                            class="h-4 w-4 border-2 border-gray-300 rounded-full flex items-center justify-center peer-checked:border-indigo-500 peer-checked:bg-indigo-50">
+                                                            <div
+                                                                class="h-2 w-2 rounded-full bg-indigo-600 opacity-0 peer-checked:opacity-100">
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -237,8 +244,11 @@
                             <div id="sms-fields" class="mt-6 p-4 bg-blue-50 border border-blue-200 rounded-lg hidden">
                                 <div class="flex items-start">
                                     <div class="flex-shrink-0">
-                                        <svg class="h-5 w-5 text-blue-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
+                                        <svg class="h-5 w-5 text-blue-400" viewBox="0 0 20 20" fill="currentColor"
+                                            aria-hidden="true">
+                                            <path fill-rule="evenodd"
+                                                d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
+                                                clip-rule="evenodd" />
                                         </svg>
                                     </div>
                                     <div class="ml-3 flex-1">
@@ -246,13 +256,13 @@
                                             SMS authentication requires a phone number to receive verification codes.
                                         </p>
                                         <div>
-                                            <label for="phone_number" class="block text-sm font-medium text-gray-700 mb-1">
+                                            <label for="phone_number"
+                                                class="block text-sm font-medium text-gray-700 mb-1">
                                                 Phone Number <span class="text-red-500">*</span>
                                             </label>
                                             <input type="tel" name="phone_number" id="phone_number"
                                                 class="block w-full px-3 py-2 border border-gray-300 placeholder-gray-400 text-gray-900 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                                                placeholder="+1 (555) 123-4567"
-                                                autocomplete="tel">
+                                                placeholder="+1 (555) 123-4567" autocomplete="tel">
                                             <p class="mt-1 text-xs text-gray-500">
                                                 Include country code (e.g., +1 for US, +44 for UK)
                                             </p>
