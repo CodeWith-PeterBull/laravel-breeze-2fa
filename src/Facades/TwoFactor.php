@@ -14,7 +14,7 @@ use MetaSoftDevs\LaravelBreeze2FA\Contracts\TwoFactorManagerInterface;
  * throughout the application using static method calls.
  *
  * @package MetaSoftDevs\LaravelBreeze2FA\Facades
- * @author MetaSoft Developers <developers@metasoft.dev>
+ * @author Meta Software Developers <info@metasoftdevs.com>
  * @version 1.0.0
  *
  * @method static bool isEnabled()

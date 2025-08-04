@@ -22,7 +22,7 @@ use MetaSoftDevs\LaravelBreeze2FA\Models\TwoFactorRecoveryCode;
  * including setup, confirmation, login challenge, and device management.
  *
  * @package MetaSoftDevs\LaravelBreeze2FA\Tests\Feature
- * @author MetaSoft Developers <developers@metasoft.dev>
+ * @author Meta Software Developers <info@metasoftdevs.com>
  * @version 1.0.0
  */
 class TwoFactorWorkflowTest extends TestCase

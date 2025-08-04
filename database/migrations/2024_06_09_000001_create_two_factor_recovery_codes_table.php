@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Schema;
  * Each code is hashed and can only be used once.
  *
  * @package MetaSoftDevs\LaravelBreeze2FA
- * @author MetaSoft Developers <developers@metasoft.dev>
+ * @author Meta Software Developers <info@metasoftdevs.com>
  * @version 1.0.0
  */
 return new class extends Migration

@@ -13,7 +13,7 @@ use Illuminate\Routing\Controller;
  * TODO: Implement admin endpoints for user 2FA management, statistics, and reporting.
  *
  * @package MetaSoftDevs\LaravelBreeze2FA\Http\Controllers
- * @author MetaSoft Developers <developers@metasoft.dev>
+ * @author Meta Software Developers <info@metasoftdevs.com>
  * @version 1.0.0
  */
 class AdminController extends Controller

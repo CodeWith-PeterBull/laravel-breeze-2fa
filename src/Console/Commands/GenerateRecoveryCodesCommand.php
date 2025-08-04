@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Config;
  * Usage: php artisan two-factor:generate-recovery-codes {user}
  *
  * @package MetaSoftDevs\LaravelBreeze2FA\Console\Commands
- * @author MetaSoft Developers <developers@metasoft.dev>
+ * @author Meta Software Developers <info@metasoftdevs.com>
  * @version 1.0.0
  */
 class GenerateRecoveryCodesCommand extends Command

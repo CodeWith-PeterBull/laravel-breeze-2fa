@@ -18,7 +18,7 @@ use Carbon\Carbon;
  * is generated and stored to skip 2FA on future logins.
  *
  * @package MetaSoftDevs\LaravelBreeze2FA\Models
- * @author MetaSoft Developers <developers@metasoft.dev>
+ * @author Meta Software Developers <info@metasoftdevs.com>
  * @version 1.0.0
  *
  * @property int $id

@@ -23,7 +23,7 @@ use MetaSoftDevs\LaravelBreeze2FA\Exceptions\TwoFactorException;
  * for authenticator apps like Google Authenticator, Authy, etc.
  *
  * @package MetaSoftDevs\LaravelBreeze2FA\Services
- * @author MetaSoft Developers <metasoftdevs.com>
+ * @author Meta Software Developers <metasoftdevs.com>
  * @version 1.0.0
  */
 class TOTPService implements TOTPServiceInterface

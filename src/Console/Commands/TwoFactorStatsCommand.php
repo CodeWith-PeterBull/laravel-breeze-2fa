@@ -14,7 +14,7 @@ use MetaSoftDevs\LaravelBreeze2FA\Models\TwoFactorAttempt;
  * Usage: php artisan two-factor:stats
  *
  * @package MetaSoftDevs\LaravelBreeze2FA\Console\Commands
- * @author MetaSoft Developers <developers@metasoft.dev>
+ * @author Meta Software Developers <info@metasoftdevs.com>
  * @version 1.0.0
  */
 class TwoFactorStatsCommand extends Command

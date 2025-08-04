@@ -22,7 +22,7 @@ use Illuminate\Support\Facades\Log;
  * and customizable templates.
  *
  * @package MetaSoftDevs\LaravelBreeze2FA\Mail
- * @author MetaSoft Developers <developers@metasoft.dev>
+ * @author Meta Software Developers <info@metasoftdevs.com>
  * @version 1.0.0
  */
 class TwoFactorCodeMail extends Mailable implements ShouldQueue

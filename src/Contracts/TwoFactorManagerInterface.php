@@ -17,7 +17,7 @@ use MetaSoftDevs\LaravelBreeze2FA\Exceptions\RateLimitExceededException;
  * functionality including setup, verification, and user management.
  *
  * @package MetaSoftDevs\LaravelBreeze2FA\Contracts
- * @author MetaSoft Developers <info@metasoftdevs.com>
+ * @author Meta Software Developers <info@metasoftdevs.com>
  * @version 1.0.0
  */
 interface TwoFactorManagerInterface

@@ -411,7 +411,7 @@ The MIT License (MIT). Please see [License File](LICENSE.md) for more informatio
 
 ## 🙏 Credits
 
-- [MetaSoft Developers](https://github.com/metasoftdevs)
+- [Meta Software Developers](https://github.com/metasoftdevs)
 - [All Contributors](../../contributors)
 
 ## 🔗 Related Packages

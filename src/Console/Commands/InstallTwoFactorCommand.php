@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Artisan;
  * and setting up configuration.
  *
  * @package MetaSoftDevs\LaravelBreeze2FA\Console\Commands
- * @author MetaSoft Developers <developers@metasoft.dev>
+ * @author Meta Software Developers <info@metasoftdevs.com>
  * @version 1.0.0
  */
 class InstallTwoFactorCommand extends Command

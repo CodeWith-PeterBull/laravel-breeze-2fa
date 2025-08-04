@@ -28,7 +28,7 @@ use MetaSoftDevs\LaravelBreeze2FA\Exceptions\RateLimitExceededException;
  * It provides both web and API endpoints with proper error handling.
  *
  * @package MetaSoftDevs\LaravelBreeze2FA\Http\Controllers
- * @author MetaSoft Developers <info@metasoftdevs.com>
+ * @author Meta Software Developers <info@metasoftdevs.com>
  * @version 1.0.0
  */
 class TwoFactorController extends Controller

@@ -10,7 +10,7 @@ namespace MetaSoftDevs\LaravelBreeze2FA\Exceptions;
  * Thrown when two-factor authentication setup is required but not completed.
  *
  * @package MetaSoftDevs\LaravelBreeze2FA\Exceptions
- * @author MetaSoft Developers <developers@metasoft.dev>
+ * @author Meta Software Developers <info@metasoftdevs.com>
  * @version 1.0.0
  */
 class SetupRequiredException extends TwoFactorException

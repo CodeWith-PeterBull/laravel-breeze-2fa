@@ -21,7 +21,7 @@ use Carbon\Carbon;
  * relationships to recovery codes and authentication attempts.
  *
  * @package MetaSoftDevs\LaravelBreeze2FA\Models
- * @author MetaSoft Developers <metasoftdevs.com>
+ * @author Meta Software Developers <metasoftdevs.com>
  * @version 1.0.0
  *
  * @property int $id

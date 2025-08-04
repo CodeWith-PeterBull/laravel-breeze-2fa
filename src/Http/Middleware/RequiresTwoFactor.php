@@ -21,7 +21,7 @@ use Symfony\Component\HttpFoundation\Response;
  * the 2FA challenge if necessary.
  *
  * @package MetaSoftDevs\LaravelBreeze2FA\Http\Middleware
- * @author MetaSoft Developers <info@metasoftdevs.com>
+ * @author Meta Software Developers <info@metasoftdevs.com>
  * @version 1.0.0
  */
 class RequiresTwoFactor

@@ -23,7 +23,7 @@ use MetaSoftDevs\LaravelBreeze2FA\Exceptions\TwoFactorException;
  * verification, and management of single-use recovery codes.
  *
  * @package MetaSoftDevs\LaravelBreeze2FA\Services
- * @author MetaSoft Developers <developers@metasoft.dev>
+ * @author Meta Software Developers <info@metasoftdevs.com>
  * @version 1.0.0
  */
 class RecoveryCodeService implements RecoveryCodeServiceInterface

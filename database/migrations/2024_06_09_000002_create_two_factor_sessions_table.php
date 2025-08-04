@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Schema;
  * and stored to skip 2FA on future logins from the same device.
  *
  * @package MetaSoftDevs\LaravelBreeze2FA
- * @author MetaSoft Developers <info@metasoftdevs.com>
+ * @author Meta Software Developers <info@metasoftdevs.com>
  * @version 1.0.0
  */
 return new class extends Migration

@@ -31,7 +31,7 @@ use MetaSoftDevs\LaravelBreeze2FA\Exceptions\RateLimitExceededException;
  * authentication methods (TOTP, Email OTP, SMS OTP, Recovery Codes).
  *
  * @package MetaSoftDevs\LaravelBreeze2FA\Services
- * @author MetaSoft Developers <developers@metasoft.dev>
+ * @author Meta Software Developers <info@metasoftdevs.com>
  * @version 1.0.0
  */
 class TwoFactorManager implements TwoFactorManagerInterface
@@ -402,7 +402,7 @@ class TwoFactorManager implements TwoFactorManagerInterface
             ];
         }
 
-        if ($this->isMethodEnabled('sms') && $this->userHasPhoneNumber($user)) {
+        if ($this->isMethodEnabled('sms')) {
             $methods['sms'] = [
                 'name' => 'SMS',
                 'description' => 'Receive codes via text message',

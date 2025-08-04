@@ -23,7 +23,7 @@ use MetaSoftDevs\LaravelBreeze2FA\Exceptions\SMSProviderException;
  * SMS providers with a driver-based architecture.
  *
  * @package MetaSoftDevs\LaravelBreeze2FA\Services
- * @author MetaSoft Developers <info@metasoftdevs.com>
+ * @author Meta Software Developers <info@metasoftdevs.com>
  * @version 1.0.0
  */
 class SMSOTPService implements SMSOTPServiceInterface

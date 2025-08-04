@@ -19,7 +19,7 @@ use Carbon\Carbon;
  * force attacks and provides detailed analytics.
  *
  * @package MetaSoftDevs\LaravelBreeze2FA\Models
- * @author MetaSoft Developers <info@metasoftdevs.com>
+ * @author Meta Software Developers <info@metasoftdevs.com>
  * @version 1.0.0
  *
  * @property int $id

@@ -23,7 +23,7 @@ use MetaSoftDevs\LaravelBreeze2FA\Events\DeviceForgotten;
  * It uses secure tokens and device fingerprinting for security.
  *
  * @package MetaSoftDevs\LaravelBreeze2FA\Services
- * @author MetaSoft Developers <developers@metasoft.dev>
+ * @author Meta Software Developers <info@metasoftdevs.com>
  * @version 1.0.0
  */
 class DeviceRememberService implements DeviceRememberServiceInterface

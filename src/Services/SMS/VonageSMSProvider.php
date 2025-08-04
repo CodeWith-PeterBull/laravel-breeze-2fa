@@ -14,7 +14,7 @@ use MetaSoftDevs\LaravelBreeze2FA\Exceptions\SMSProviderException;
  * This class should handle SMS delivery, error handling, and status tracking.
  *
  * @package MetaSoftDevs\LaravelBreeze2FA\Services\SMS
- * @author MetaSoft Developers <developers@metasoft.dev>
+ * @author Meta Software Developers <info@metasoftdevs.com>
  * @version 1.0.0
  */
 class VonageSMSProvider implements SMSProviderInterface

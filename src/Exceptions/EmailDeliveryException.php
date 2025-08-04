@@ -10,7 +10,7 @@ namespace MetaSoftDevs\LaravelBreeze2FA\Exceptions;
  * Thrown when there's an error delivering the email OTP.
  *
  * @package MetaSoftDevs\LaravelBreeze2FA\Exceptions
- * @author MetaSoft Developers <developers@metasoft.dev>
+ * @author Meta Software Developers <info@metasoftdevs.com>
  * @version 1.0.0
  */
 class EmailDeliveryException extends TwoFactorException

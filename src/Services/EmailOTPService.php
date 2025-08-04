@@ -20,7 +20,7 @@ use MetaSoftDevs\LaravelBreeze2FA\Exceptions\TwoFactorException;
  * email sending, and verification. Codes are temporary and time-limited for security.
  *
  * @package MetaSoftDevs\LaravelBreeze2FA\Services
- * @author MetaSoft Developers <info@metasoftdevs.com>
+ * @author Meta Software Developers <info@metasoftdevs.com>
  * @version 1.0.0
  */
 class EmailOTPService implements EmailOTPServiceInterface

@@ -14,7 +14,7 @@ use MetaSoftDevs\LaravelBreeze2FA\Exceptions\SMSProviderException;
  * standardized way to interact with different SMS services.
  *
  * @package MetaSoftDevs\LaravelBreeze2FA\Contracts
- * @author MetaSoft Developers <developers@metasoft.dev>
+ * @author Meta Software Developers <info@metasoftdevs.com>
  * @version 1.0.0
  */
 interface SMSProviderInterface

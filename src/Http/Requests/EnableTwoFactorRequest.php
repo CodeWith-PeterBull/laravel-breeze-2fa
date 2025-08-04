@@ -16,7 +16,7 @@ use Illuminate\Validation\Rule;
  * for the specific 2FA method.
  *
  * @package MetaSoftDevs\LaravelBreeze2FA\Http\Requests
- * @author MetaSoft Developers <info@metasoftdevs.com>
+ * @author Meta Software Developers <info@metasoftdevs.com>
  * @version 1.0.0
  */
 class EnableTwoFactorRequest extends FormRequest
@@ -110,18 +110,26 @@ class EnableTwoFactorRequest extends FormRequest
         // Clean phone number if provided
         if ($this->has('phone_number')) {
             $phoneNumber = $this->input('phone_number');
-            $cleanPhoneNumber = preg_replace('/[^0-9+]/', '', $phoneNumber);
 
-            $this->merge([
-                'phone_number' => $cleanPhoneNumber,
-            ]);
+            // Only process if phone number is not null and not empty
+            if (!empty($phoneNumber) && is_string($phoneNumber)) {
+                $cleanPhoneNumber = preg_replace('/[^0-9+]/', '', $phoneNumber);
+
+                $this->merge([
+                    'phone_number' => $cleanPhoneNumber,
+                ]);
+            }
         }
 
         // Normalize method name
         if ($this->has('method')) {
-            $this->merge([
-                'method' => strtolower(trim($this->input('method'))),
-            ]);
+            $method = $this->input('method');
+
+            if (!empty($method) && is_string($method)) {
+                $this->merge([
+                    'method' => strtolower(trim($method)),
+                ]);
+            }
         }
     }
 

@@ -10,7 +10,7 @@ namespace MetaSoftDevs\LaravelBreeze2FA\Exceptions;
  * Thrown when too many authentication attempts have been made.
  *
  * @package MetaSoftDevs\LaravelBreeze2FA\Exceptions
- * @author MetaSoft Developers <developers@metasoft.dev>
+ * @author Meta Software Developers <info@metasoftdevs.com>
  * @version 1.0.0
  */
 class RateLimitExceededException extends TwoFactorException

@@ -13,7 +13,7 @@ use Illuminate\Routing\Controller;
  * TODO: Implement trusted device management endpoints (list, forget, etc.).
  *
  * @package MetaSoftDevs\LaravelBreeze2FA\Http\Controllers
- * @author MetaSoft Developers <developers@metasoft.dev>
+ * @author Meta Software Developers <info@metasoftdevs.com>
  * @version 1.0.0
  */
 class TwoFactorDeviceController extends Controller

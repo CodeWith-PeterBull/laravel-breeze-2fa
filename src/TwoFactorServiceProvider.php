@@ -31,7 +31,7 @@ use MetaSoftDevs\LaravelBreeze2FA\Console\Commands\CleanupExpiredSessionsCommand
  * two-factor authentication services, middleware, routes, and publishable assets.
  *
  * @package MetaSoftDevs\LaravelBreeze2FA
- * @author MetaSoft Developers <developers@metasoft.dev>
+ * @author Meta Software Developers <info@metasoftdevs.com>
  * @version 1.0.0
  */
 class TwoFactorServiceProvider extends ServiceProvider

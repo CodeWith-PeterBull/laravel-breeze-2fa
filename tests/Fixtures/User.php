@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Schema;
  * package. It provides the basic user functionality needed for 2FA testing.
  *
  * @package MetaSoftDevs\LaravelBreeze2FA\Tests\Fixtures
- * @author MetaSoft Developers <developers@metasoft.dev>
+ * @author Meta Software Developers <info@metasoftdevs.com>
  * @version 1.0.0
  */
 class User extends Authenticatable

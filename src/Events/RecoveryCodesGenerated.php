@@ -15,7 +15,7 @@ use Illuminate\Queue\SerializesModels;
  * This event is fired when new recovery codes are generated for a user.
  *
  * @package MetaSoftDevs\LaravelBreeze2FA\Events
- * @author MetaSoft Developers <info@metasoftdevs.com>
+ * @author Meta Software Developers <info@metasoftdevs.com>
  * @version 1.0.0
  */
 class RecoveryCodesGenerated

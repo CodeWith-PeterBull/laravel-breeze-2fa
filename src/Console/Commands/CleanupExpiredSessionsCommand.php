@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\DB;
  * database performance and security.
  *
  * @package MetaSoftDevs\LaravelBreeze2FA\Console\Commands
- * @author MetaSoft Developers <developers@metasoft.dev>
+ * @author Meta Software Developers <info@metasoftdevs.com>
  * @version 1.0.0
  */
 class CleanupExpiredSessionsCommand extends Command

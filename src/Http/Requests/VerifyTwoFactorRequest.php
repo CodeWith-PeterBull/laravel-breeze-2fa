@@ -16,7 +16,7 @@ use Illuminate\Validation\Rule;
  * It validates code format and implements rate limiting.
  *
  * @package MetaSoftDevs\LaravelBreeze2FA\Http\Requests
- * @author MetaSoft Developers <info@metasoftdevs.com>
+ * @author Meta Software Developers <info@metasoftdevs.com>
  * @version 1.0.0
  */
 class VerifyTwoFactorRequest extends FormRequest

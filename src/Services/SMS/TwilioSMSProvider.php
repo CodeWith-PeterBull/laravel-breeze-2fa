@@ -17,7 +17,7 @@ use MetaSoftDevs\LaravelBreeze2FA\Exceptions\SMSProviderException;
  * and delivery status tracking.
  *
  * @package MetaSoftDevs\LaravelBreeze2FA\Services\SMS
- * @author MetaSoft Developers <info@metasoftdevs.com>
+ * @author Meta Software Developers <info@metasoftdevs.com>
  * @version 1.0.0
  */
 class TwilioSMSProvider implements SMSProviderInterface

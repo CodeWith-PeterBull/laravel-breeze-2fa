@@ -20,7 +20,7 @@ use MetaSoftDevs\LaravelBreeze2FA\Tests\Fixtures\User;
  * for users.
  *
  * @package MetaSoftDevs\LaravelBreeze2FA\Tests\Unit
- * @author MetaSoft Developers <developers@metasoft.dev>
+ * @author Meta Software Developers <info@metasoftdevs.com>
  * @version 1.0.0
  */
 class TwoFactorManagerTest extends TestCase
