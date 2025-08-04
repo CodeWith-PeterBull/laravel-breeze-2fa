@@ -403,7 +403,7 @@ Please see [CHANGELOG.md](CHANGELOG.md) for more information on what has changed
 
 ## 🛡️ Security
 
-If you discover any security-related issues, please emailinfo@metasoftdevs.com instead of using the issue tracker.
+If you discover any security-related issues, please email info@metasoftdevs.com instead of using the issue tracker.
 
 ## 📄 License
 
