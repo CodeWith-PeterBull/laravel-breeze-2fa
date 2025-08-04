@@ -159,7 +159,7 @@ This project follows [Semantic Versioning](https://semver.org/):
 ### Security Updates
 
 Security vulnerabilities will be addressed immediately with patch releases.
-If you discover a security vulnerability, please email security@metasoft.dev.
+If you discover a security vulnerability, please emailinfo@metasoftdevs.com.
 
 ### Deprecation Policy
 
