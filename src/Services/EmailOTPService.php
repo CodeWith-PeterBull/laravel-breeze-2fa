@@ -136,6 +136,14 @@ class EmailOTPService implements EmailOTPServiceInterface
      */
     public function hasValidCode(Authenticatable $user): bool
     {
+        $cacheKey = $this->getCacheKey($user);
+        $data = Cache::get($cacheKey);
+
+        if (is_array($data) && isset($data['code'], $data['expires_at'])) {
+            return $data['expires_at'] > time();
+        }
+
+        // For backwards compatibility
         return !is_null($this->getStoredCode($user));
     }
 
@@ -148,11 +156,13 @@ class EmailOTPService implements EmailOTPServiceInterface
     public function getTimeRemaining(Authenticatable $user): int
     {
         $cacheKey = $this->getCacheKey($user);
-        $ttl = Cache::getStore()->getPrefix() ?
-            Cache::getStore()->get($cacheKey . '_ttl') :
-            0;
+        $data = Cache::get($cacheKey);
 
-        return max(0, $ttl - time());
+        if (is_array($data) && isset($data['expires_at'])) {
+            return max(0, $data['expires_at'] - time());
+        }
+
+        return 0;
     }
 
     /**
@@ -225,8 +235,16 @@ class EmailOTPService implements EmailOTPServiceInterface
     {
         $cacheKey = $this->getCacheKey($user);
         $expiry = Config::get('two-factor.methods.email.expiry', 300); // 5 minutes
+        $expiresAt = time() + $expiry;
 
-        return Cache::put($cacheKey, $code, $expiry);
+        // Store both the code and expiry time
+        $success = Cache::put($cacheKey, [
+            'code' => $code,
+            'expires_at' => $expiresAt,
+            'created_at' => time(),
+        ], $expiry);
+
+        return $success;
     }
 
     /**
@@ -238,8 +256,14 @@ class EmailOTPService implements EmailOTPServiceInterface
     protected function getStoredCode(Authenticatable $user): ?string
     {
         $cacheKey = $this->getCacheKey($user);
+        $data = Cache::get($cacheKey);
 
-        return Cache::get($cacheKey);
+        if (is_array($data) && isset($data['code'])) {
+            return $data['code'];
+        }
+
+        // For backwards compatibility if stored as string
+        return is_string($data) ? $data : null;
     }
 
     /**
@@ -425,6 +449,10 @@ class EmailOTPService implements EmailOTPServiceInterface
                 public function getRememberTokenName()
                 {
                     return '';
+                }
+                public function getAuthPasswordName()
+                {
+                    return 'password';
                 }
             };
 

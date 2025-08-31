@@ -34,6 +34,9 @@ class TwoFactorManagerTest extends TestCase
     {
         parent::setUp();
 
+        // Create users table for testing
+        User::createTable();
+
         $this->loadMigrationsFrom(__DIR__ . '/../../database/migrations');
 
         // Set up test configuration

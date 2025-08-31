@@ -57,6 +57,15 @@ class TwoFactorWorkflowTest extends TestCase
         Config::set('two-factor.routes.enabled', true);
 
         Mail::fake();
+        
+        // Add basic test routes
+        $this->app['router']->get('/login', function() {
+            return response('Login');
+        })->name('login');
+        
+        $this->app['router']->get('/dashboard', function() {
+            return response('Dashboard');
+        })->name('dashboard');
     }
 
     /**

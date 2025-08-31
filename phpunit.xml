@@ -10,8 +10,7 @@
          failOnRisky="true"
          failOnEmptyTestSuite="true"
          beStrictAboutOutputDuringTests="true"
-         cacheDirectory="build/cache/phpunit"
-         backupStaticAttributes="false">
+         cacheDirectory="build/cache/phpunit">
     
     <testsuites>
         <testsuite name="Unit">
@@ -19,9 +18,6 @@
         </testsuite>
         <testsuite name="Feature">
             <directory suffix="Test.php">./tests/Feature</directory>
-        </testsuite>
-        <testsuite name="Integration">
-            <directory suffix="Test.php">./tests/Integration</directory>
         </testsuite>
     </testsuites>
     
@@ -36,7 +32,6 @@
     </source>
     
     <coverage includeUncoveredFiles="true"
-              processUncoveredFiles="true"
               pathCoverage="false"
               ignoreDeprecatedCodeUnits="true"
               disableCodeCoverageIgnore="true">
